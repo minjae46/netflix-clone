@@ -6,10 +6,10 @@ import Search from "./Routes/Search";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="movies/:id" element={<Home />} />
         <Route path="/tv" element={<Tv />} />
         <Route path="shows/:id" element={<Tv />} />
